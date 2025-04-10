@@ -16,7 +16,7 @@ const BookService = () => {
   };
 
   const handleSubmit = async () => {
-    const res = await axios.post('http://localhost:5000/api/bookings', formData);
+    const res = await axios.post('${process.env.REACT_APP_API_BASE}/bookings', formData);
     setMessage(res.data.message);
     setFormData({
       name: '',

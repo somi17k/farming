@@ -6,7 +6,7 @@ const Resources = () => {
   const [input, setInput] = useState('');
 
   const fetchResources = async () => {
-    const res = await axios.get('http://localhost:5000/api/resources');
+    const res = await axios.get('${process.env.REACT_APP_API_BASE}/resources');
     setResources(res.data);
   };
 
@@ -16,14 +16,14 @@ const Resources = () => {
 
   const handleAdd = async () => {
     if (input.trim()) {
-      await axios.post('http://localhost:5000/api/resources', { name: input });
+      await axios.post('${process.env.REACT_APP_API_BASE}/resources', { name: input });
       setInput('');
       fetchResources();
     }
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/resources/${id}`);
+    await axios.delete(`${process.env.REACT_APP_API_BASE}/resources/${id}`);
     fetchResources();
   };
 
