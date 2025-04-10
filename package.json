@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
   "name": "client",
   "version": "1.0.0",
   "private": true,
@@ -29,9 +29,3 @@
     ]
   }
 }
-=======
-  "dependencies": {
-    "mongodb": "^6.15.0"
-  }
-}
->>>>>>> ed283cbf8e02cd57d18f2541e7b1147f25c519c1
